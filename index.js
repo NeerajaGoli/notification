@@ -7,7 +7,7 @@ const server = http.createServer()
 // We define a function that runs in response a request event
 server.on("request", (request, response) => {
   // handle request based on method then URL
-  console.log("recevied notification",request);
+  console.log("recevied notification",request.body);
   response.statusCode = 200
   response.write("Hello World")
   response.end()
