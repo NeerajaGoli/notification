@@ -8,6 +8,7 @@ const server = http.createServer()
 server.on("request", async(request, response) => {
   // handle request based on method then URL
   const body = await getBody(request);
+  console.log("request is ",request);
   console.log("received notification",body)
   
   response.statusCode = 200
